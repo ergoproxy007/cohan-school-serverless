@@ -5,11 +5,11 @@ import com.example.cohan.domain.http.output.PersonResponse;
 public class ResponseMapper {
 
     public static PersonResponse toPersonResponse(
-            String state,
+            String success,
             String message
     ) {
         return PersonResponse.builder()
-                .state(state)
+                .state(success)
                 .message(message)
                 .build();
     }
