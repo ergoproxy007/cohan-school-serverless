@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/replay_pid17068.log

@@ -24,12 +24,12 @@ public class CourseController {
         Course course1 = new Course();
         course1.setId(1);
         course1.setName("Introduction to Java & Spring");
-        course1.setPrice(330.0);
+        course1.setPrice(55.0);
 
         Course course2 = new Course();
         course2.setId(2);
         course2.setName("Advanced Spring Boot Java");
-        course2.setPrice(110.0);
+        course2.setPrice(99.0);
 
         return Arrays.asList(course1, course2);
     }
