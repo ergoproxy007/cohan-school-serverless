@@ -1,4 +1,4 @@
-package com.example.cohan.controller;
+package com.example.cohan.infrastructure.input.controller.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.example.cohan.controller;
+package com.example.cohan.domain.school.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Course {
-
-    private int id;
+public abstract class Person {
     private String name;
-    private double price;
+    private String phoneNumber;
+    private String email;
 }
-

@@ -1,6 +1,6 @@
 package com.example.cohan;
 
-import com.example.cohan.controller.PingController;
+import com.example.cohan.infrastructure.input.controller.util.PingController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
