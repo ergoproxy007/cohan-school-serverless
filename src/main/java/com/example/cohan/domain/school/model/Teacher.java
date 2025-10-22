@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class Person {
-    private String dni;
-    private String name;
-    private String phoneNumber;
-    private String email;
+public class Teacher extends Person {
+    private Double salary;
 }

@@ -28,7 +28,7 @@ public class PersonController {
         this.personCommandUseCase = personCommandUseCase;
     }
 
-    private static final String PERSON_ROUTE = "/person";
+    private static final String PERSON_ROUTE = "/persons";
 
     @PostMapping(
             value = PERSON_ROUTE,
