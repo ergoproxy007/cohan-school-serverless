@@ -4,7 +4,6 @@ import com.example.cohan.domain.school.enums.PersonType;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,6 @@ public class PersonRequest {
     private String name;
     private String phoneNumber;
     private String email;
-    @NotNull(message = "type is required")
     private PersonType type;
     private Double salary;
     private Long number;

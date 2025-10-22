@@ -28,4 +28,13 @@ public class BusinessException extends DomainException {
         }
     }
 
+    public static class Conflict extends BusinessException {
+        public Conflict(
+                String codeError,
+                String originError,
+                String message
+        ) {
+            super(codeError, originError, message, HttpStatus.CONFLICT);
+        }
+    }
 }

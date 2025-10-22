@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class PersonResponse {
+    private Long id;
     private String state;
     private String message;
 }

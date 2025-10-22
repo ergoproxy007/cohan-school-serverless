@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentJpaRepository extends JpaRepository<StudentEntity, Long>  {
+    boolean existsByDni(String dni);
 }
