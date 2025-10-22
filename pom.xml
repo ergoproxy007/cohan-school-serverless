@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example.cohan</groupId>
 	<artifactId>cohan-school-serverless</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>cohan-school-serverless</name>
 	<description>Demo for Spring Boot with AWS Lambda Functions Serverless</description>
 	<url/>

@@ -7,6 +7,7 @@ import lombok.Getter;
 @Builder
 public class PersonSucessResponse {
     private Long id;
+    private String dni;
     private String state;
     private String message;
 }
