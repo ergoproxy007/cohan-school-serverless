@@ -5,6 +5,7 @@ import com.example.cohan.domain.exceptions.ApiException;
 import com.example.cohan.domain.exceptions.BusinessException;
 import com.example.cohan.domain.exceptions.TechnicalException;
 import com.example.cohan.domain.http.input.PersonRequest;
+import com.example.cohan.domain.http.input.PersonUpdateRequest;
 import com.example.cohan.domain.http.output.PersonSucessResponse;
 import com.example.cohan.domain.http.output.StudentResponse;
 import com.example.cohan.domain.http.output.TeacherResponse;
@@ -64,10 +65,7 @@ public class PersonCommandInteractor implements PersonCommandUseCase {
 
     @Override
     public PersonSucessResponse create(PersonRequest request) {
-        var person = switch (request.getType()) {
-            case STUDENT -> DomainMapper.toStudent(request);
-            case TEACHER -> DomainMapper.toTeacher(request);
-        };
+        var person = getPerson(request);
         var type = request.getType();
         var id = savePerson(person, type);
         return createSuccessResponse(id, type);
@@ -99,6 +97,48 @@ public class PersonCommandInteractor implements PersonCommandUseCase {
                     messageError);
         }
         return entitySaved.get();
+    }
+
+    @Override
+    public PersonSucessResponse update(PersonUpdateRequest request) {
+        try {
+            switch (request.getType()) {
+                case STUDENT -> port.updateTeacher(
+                        request.getId(),
+                        request.getDni(),
+                        request.getPhoneNumber(),
+                        request.getEmail(),
+                        request.getAverageMark()
+                );
+                case TEACHER -> port.updateTeacher(
+                        request.getId(),
+                        request.getDni(),
+                        request.getPhoneNumber(),
+                        request.getEmail(),
+                        request.getSalary()
+                );
+            };
+            return ResponseMapper.toPersonResponse(
+                    request.getId(),
+                    "success",
+                    "%s updated successfully".formatted(request.getType())
+            );
+        } catch (BusinessException be) {
+            throw handleBusinessException(be);
+        } catch (TechnicalException te) {
+            LOGGER.error(te.getMessage(), te);
+            throw te;
+        } catch (Exception e) {
+            String messageError = "Error occurred trying to update a person [dni:%s]".formatted(request.getDni());
+            throw handleInternalServerError(CodeErrorEnum.PERSON_UPDATE_INTERNAL_ERROR, messageError, e);
+        }
+    }
+
+    private Person getPerson(PersonRequest request) {
+        return switch (request.getType()) {
+            case STUDENT -> DomainMapper.toStudent(request);
+            case TEACHER -> DomainMapper.toTeacher(request);
+        };
     }
 
     private PersonSucessResponse createSuccessResponse(Long id, PersonType type) {

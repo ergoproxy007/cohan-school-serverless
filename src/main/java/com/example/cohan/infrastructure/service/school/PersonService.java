@@ -16,6 +16,8 @@ import com.example.cohan.domain.school.port.input.PersonPort;
 import com.example.cohan.infrastructure.repository.StudentJpaRepository;
 import com.example.cohan.infrastructure.repository.TeacherJpaRepository;
 import java.util.Optional;
+
+import com.example.cohan.infrastructure.service.helper.UpdateHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -63,6 +65,24 @@ public class PersonService implements PersonPort {
             return saveStudent(student).map(StudentEntity::getId);
         }
         return empty();
+    }
+
+    @Override
+    public void updateTeacher(Long id, String dni, String phone, String email, Double salary) {
+        Optional<TeacherEntity> entity = teacherRepository.findById(id);
+        var teacher = UpdateHelper.modifyTeacherData(entity, dni, phone, email, salary);
+        if (teacher.isPresent()) {
+            teacherRepository.save(teacher.get());
+        }
+    }
+
+    @Override
+    public void updateStudent(Long id, String dni, String phone, String email, Double averageMark) {
+        Optional<StudentEntity> entity = studentRepository.findById(id);
+        var student = UpdateHelper.modifyStudentData(entity, dni, phone, email, averageMark);
+        if (student.isPresent()) {
+            studentRepository.save(student.get());
+        }
     }
 
     private Optional<TeacherEntity> saveTeacher(Teacher teacher) {

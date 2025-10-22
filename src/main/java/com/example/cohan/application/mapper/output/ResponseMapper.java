@@ -10,12 +10,30 @@ public class ResponseMapper {
 
     public static PersonSucessResponse toPersonResponse(
             Long id,
-            String success,
+            String state,
+            String message
+    ) {
+        return toPersonResponse(id, null, state, message);
+    }
+
+    public static PersonSucessResponse toPersonResponse(
+            String dni,
+            String state,
+            String message
+    ) {
+        return toPersonResponse(null, dni, state, message);
+    }
+
+    private static PersonSucessResponse toPersonResponse(
+            Long id,
+            String dni,
+            String state,
             String message
     ) {
         return PersonSucessResponse.builder()
                 .id(id)
-                .state(success)
+                .dni(dni)
+                .state(state)
                 .message(message)
                 .build();
     }

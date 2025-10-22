@@ -2,6 +2,8 @@ package com.example.cohan.domain.school.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PreUpdate;
+import java.time.LocalDateTime;
 import lombok.Data;
 
 @Data
@@ -17,5 +19,16 @@ public abstract class PersonEntity {
     private String phoneNumber;
 
     @Column(name = "email", nullable = false, length = 256)
-    private String email;
+    public String email;
+
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
+    @Column(name = "deactivated_at")
+    private LocalDateTime deactivatedAt;
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
 }
