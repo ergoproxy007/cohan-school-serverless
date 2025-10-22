@@ -1,5 +1,6 @@
 package com.example.cohan.domain.exceptions;
 
+import com.example.cohan.domain.school.enums.CodeErrorEnum;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
@@ -19,22 +20,20 @@ public class BusinessException extends DomainException {
     }
 
     public static class BadRequest extends BusinessException {
-        public BadRequest(
-                String codeError,
-                String originError,
-                String message
-        ) {
-            super(codeError, originError, message, HttpStatus.BAD_REQUEST);
+        public BadRequest(CodeErrorEnum codeErrorEnum, String message) {
+            super(codeErrorEnum.getCode(), codeErrorEnum.getOrigin(), message, HttpStatus.BAD_REQUEST);
         }
     }
 
     public static class Conflict extends BusinessException {
-        public Conflict(
-                String codeError,
-                String originError,
-                String message
-        ) {
-            super(codeError, originError, message, HttpStatus.CONFLICT);
+        public Conflict(CodeErrorEnum codeErrorEnum, String message) {
+            super(codeErrorEnum.getCode(), codeErrorEnum.getOrigin(), message, HttpStatus.CONFLICT);
+        }
+    }
+
+    public static class NotFound extends BusinessException {
+        public NotFound(CodeErrorEnum codeErrorEnum, String message) {
+            super(codeErrorEnum.getCode(), codeErrorEnum.getOrigin(), message, HttpStatus.NOT_FOUND);
         }
     }
 }

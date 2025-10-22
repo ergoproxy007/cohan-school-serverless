@@ -1,11 +1,11 @@
 package com.example.cohan.domain.http.output;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 @Builder
-public class PersonResponse {
+public class PersonSucessResponse {
     private Long id;
     private String state;
     private String message;

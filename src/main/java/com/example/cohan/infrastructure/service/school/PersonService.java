@@ -1,11 +1,13 @@
 package com.example.cohan.infrastructure.service.school;
 
+import static java.util.Optional.of;
+import static java.util.Optional.empty;
+
 import com.example.cohan.domain.exceptions.BusinessException;
-import com.example.cohan.domain.mapper.DomainMapper;
 import com.example.cohan.domain.mapper.EntityMapper;
-import com.example.cohan.domain.school.entity.PersonEntity;
 import com.example.cohan.domain.school.entity.StudentEntity;
 import com.example.cohan.domain.school.entity.TeacherEntity;
+import com.example.cohan.domain.school.enums.CodeErrorEnum;
 import com.example.cohan.domain.school.enums.PersonType;
 import com.example.cohan.domain.school.model.Person;
 import com.example.cohan.domain.school.model.Student;
@@ -33,17 +35,6 @@ public class PersonService implements PersonPort {
     }
 
     @Override
-    public Optional<Long> save(Person person) {
-        if (person instanceof Teacher teacher) {
-            return saveTeacher(teacher).map(TeacherEntity::getId);
-        }
-        if (person instanceof Student student) {
-            return saveStudent(student).map(StudentEntity::getId);
-        }
-        return Optional.empty();
-    }
-
-    @Override
     public Boolean existsByDni(String dni, PersonType type) {
         return switch (type) {
             case STUDENT -> studentRepository.existsByDni(dni);
@@ -51,18 +42,40 @@ public class PersonService implements PersonPort {
         };
     }
 
+    @Override
+    public Optional<Teacher> getTeacher(String dni) {
+        var entity = teacherRepository.findByDni(dni);
+        return entity != null ? of(EntityMapper.toDomain(entity)) : empty();
+    }
+
+    @Override
+    public Optional<Student> getStudent(String dni) {
+        var entity = studentRepository.findByDni(dni);
+        return entity != null ? of(EntityMapper.toDomain(entity)) : empty();
+    }
+
+    @Override
+    public Optional<Long> save(Person person) {
+        if (person instanceof Teacher teacher) {
+            return saveTeacher(teacher).map(TeacherEntity::getId);
+        }
+        if (person instanceof Student student) {
+            return saveStudent(student).map(StudentEntity::getId);
+        }
+        return empty();
+    }
+
     private Optional<TeacherEntity> saveTeacher(Teacher teacher) {
         if (teacher.getSalary() == null) {
             throw new BusinessException.BadRequest(
-                    "PERSON_RULE_001",
-                    "TEACHER_SAVE_PERSON_SERVICE",
+                    CodeErrorEnum.PERSON_RULE_BAD_REQUEST,
                     "[PersonService] Salary is required"
             );
         }
-        return Optional.of(teacherRepository.save(EntityMapper.toEntity(teacher)));
+        return of(teacherRepository.save(EntityMapper.toEntity(teacher)));
     }
 
     private Optional<StudentEntity> saveStudent(Student student) {
-        return Optional.of(studentRepository.save(EntityMapper.toEntity(student)));
+        return of(studentRepository.save(EntityMapper.toEntity(student)));
     }
 }

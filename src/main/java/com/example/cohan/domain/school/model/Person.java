@@ -1,12 +1,10 @@
 package com.example.cohan.domain.school.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Setter
 public abstract class Person {
     private String dni;
     private String name;

@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @Builder
 public class Teacher extends Person {
+    private Long id;
     private Double salary;
 }

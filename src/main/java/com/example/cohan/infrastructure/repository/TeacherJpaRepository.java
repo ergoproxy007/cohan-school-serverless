@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TeacherJpaRepository extends JpaRepository<TeacherEntity, Long> {
     boolean existsByDni(String dni);
+    TeacherEntity findByDni(String dni);
 }
