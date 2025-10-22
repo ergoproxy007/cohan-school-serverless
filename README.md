@@ -5,6 +5,7 @@ cohan-school-serverless
 
 ## Descripción Cambio
 Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un CRUD para la entidad Person en el siguiente diagrama UML:
+###### Modelo Propuesto:
 <img width="889" height="477" alt="image" src="https://github.com/user-attachments/assets/e413a14a-94f0-4bde-8fd8-cbfc24946618" />
 
 ## Objetivos y Requisitos
