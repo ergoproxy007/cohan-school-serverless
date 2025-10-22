@@ -4,8 +4,6 @@ import lombok.Getter;
 
 @Getter
 public abstract class DomainException extends RuntimeException {
-    private static final long serialVersionUID = 1L;
-
     private final String codeError;
     private final String originError;
     private final String message;

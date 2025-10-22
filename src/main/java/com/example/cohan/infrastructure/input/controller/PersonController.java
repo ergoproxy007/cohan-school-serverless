@@ -3,10 +3,9 @@ package com.example.cohan.infrastructure.input.controller;
 import static org.springframework.http.ResponseEntity.ok;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.example.cohan.application.mapper.output.ResponseMapper;
 import com.example.cohan.domain.http.input.PersonRequest;
 import com.example.cohan.domain.http.output.PersonResponse;
-import com.example.cohan.domain.school.port.input.PersonCommandUseCase;
+import com.example.cohan.domain.usecase.PersonCommandUseCase;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

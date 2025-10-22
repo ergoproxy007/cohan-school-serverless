@@ -1,6 +1,8 @@
 package com.example.cohan.application.advice;
 
 import com.example.cohan.domain.exceptions.ApiException;
+import com.example.cohan.domain.exceptions.BusinessException;
+import com.example.cohan.domain.exceptions.TechnicalException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -14,6 +16,16 @@ public class ResponseEntityExceptionAdviceImpl extends ResponseEntityExceptionAd
     @ExceptionHandler(ApiException.class)
     public ResponseEntity<?> handleAppException(ApiException ex) {
         return processStatus(ex, ex.getStatus());
+    }
+
+    @ExceptionHandler(BusinessException.class)
+    public ResponseEntity<?> handleBusinessException(BusinessException be) {
+        return processStatus(be, be.getStatus());
+    }
+
+    @ExceptionHandler(TechnicalException.class)
+    public ResponseEntity<?> handleTechnicalException(TechnicalException te) {
+        return processTechnicalException(te.getCodeError(), te.getOriginError());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

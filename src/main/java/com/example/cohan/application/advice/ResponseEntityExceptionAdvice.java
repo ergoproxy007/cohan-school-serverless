@@ -15,7 +15,17 @@ public abstract class ResponseEntityExceptionAdvice {
         return ResponseEntity.status(status).body(new DtoResponseEntityException(domainException));
     }
 
+    public ResponseEntity<DtoResponseEntityException> processTechnicalException(
+            String codeError,
+            String originError
+    ) {
+        String message = "A technical error has occurred";
+        return ResponseEntity.internalServerError()
+                .body(new DtoResponseEntityException(codeError, originError, message));
+    }
+
     public ResponseEntity<?> processBadRequest(List<String> errors) {
-        return ResponseEntity.badRequest().body(new DtoResponseEntityException(errors));
+        return ResponseEntity.badRequest()
+                .body(new DtoResponseEntityException(errors));
     }
 }

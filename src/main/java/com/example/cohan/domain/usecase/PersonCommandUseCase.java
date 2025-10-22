@@ -1,4 +1,4 @@
-package com.example.cohan.domain.school.port.input;
+package com.example.cohan.domain.usecase;
 
 import com.example.cohan.domain.http.input.PersonRequest;
 import com.example.cohan.domain.http.output.PersonResponse;

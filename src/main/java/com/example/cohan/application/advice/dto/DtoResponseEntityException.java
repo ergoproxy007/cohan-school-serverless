@@ -16,9 +16,17 @@ public class DtoResponseEntityException {
     private final List<String> errors;
 
     public DtoResponseEntityException(DomainException domainException) {
-        this.codeError = domainException.getCodeError();
-        this.originError = domainException.getCodeError();
-        this.errors = Collections.singletonList(domainException.getMessage());
+        this(domainException.getCodeError(), domainException.getOriginError(), domainException.getMessage());
+    }
+
+    public DtoResponseEntityException(
+            String codeError,
+            String originError,
+            String message
+    ) {
+        this.codeError = codeError;
+        this.originError = originError;
+        this.errors = Collections.singletonList(message);
     }
 
     public DtoResponseEntityException(List<String> errors) {
