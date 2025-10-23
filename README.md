@@ -21,6 +21,17 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 
 ## Documentación Técnica
 * Amazon RDS -> PostgreSQL RDBMS
+* Amazon Lambda Funtions -> Java21 Serverless
+* Amazon EC2 y API Gateway
+
+<img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
+
+###### Database Connection:
+```
+datasource.url=jdbc:postgresql://cohan-postgres.cnciw0u60cxr.us-east-2.rds.amazonaws.com:5432/cohan_school
+datasource.username=postgres
+datasource.password=postgres
+```
 
 ### Deploy
 * Maven Packaging Application > { excetute command } ->  `mvn clean package`
