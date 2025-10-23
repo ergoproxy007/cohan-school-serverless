@@ -40,6 +40,15 @@ datasource.password=postgres
 * Puedes Visualizar la aplicación desde :
 https://github.com/ergoproxy007/cohan-school-vue/settings/pages
 
+<img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/fa346049-022c-4e2f-8f64-97a179e76aa5" />
+
+## Pruebas
+Se deja evidencia de pruebas en Front y Back.
+
+| Front - GH-Pages | Back - Postman |
+|-------------|---------|
+| <img width="864" height="620" alt="Captura de pantalla 2025-10-23 162524" src="https://github.com/user-attachments/assets/f709b4c0-68e7-4c41-999b-da9b7f4b9414" /> | <img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/e0a0c338-7d7a-4286-910c-2fe2863e5cb8" /> |
+
 * Puedes descargar la colección de POSTMAN para pruebas invocar los endpoint desplegados en AWS:
 [COHAN.postman_collection.json.zip](https://github.com/user-attachments/files/23108871/COHAN.postman_collection.json.zip)
 
