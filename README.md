@@ -36,18 +36,12 @@ datasource.password=postgres
 ### Deploy
 * Maven Packaging Application > { excetute command } ->  `mvn clean package`
 
-### Modelo de Datos Actual:
-
-###### Actualización Modelo de Datos Propuesto:
-[PENDIENTE]
-
-###### Validaciones Adicionales:
-
-## Pruebas
-[PENDIENTE]
-
 ### Monitoreo, KPIs, Evidencias
-[PENDIENTE]
+* Puedes Visualizar la aplicación desde :
+https://github.com/ergoproxy007/cohan-school-vue/settings/pages
+
+* Puedes descargar la colección de POSTMAN para pruebas invocar los endpoint desplegados en AWS:
+[COHAN.postman_collection.json.zip](https://github.com/user-attachments/files/23108871/COHAN.postman_collection.json.zip)
 
 ## Estrategia de Despliegue
 * Despliegue de la nueva versión 1.12.2.
