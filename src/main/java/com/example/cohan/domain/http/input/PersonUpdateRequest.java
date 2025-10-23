@@ -18,6 +18,7 @@ public class PersonUpdateRequest {
     private String phoneNumber;
     private String email;
     private PersonType type;
+    private Long number;
     private Double salary;
     private Double averageMark;
 }

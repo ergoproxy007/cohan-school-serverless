@@ -103,11 +103,12 @@ public class PersonCommandInteractor implements PersonCommandUseCase {
     public PersonSucessResponse update(PersonUpdateRequest request) {
         try {
             switch (request.getType()) {
-                case STUDENT -> port.updateTeacher(
+                case STUDENT -> port.updateStudent(
                         request.getId(),
                         request.getDni(),
                         request.getPhoneNumber(),
                         request.getEmail(),
+                        request.getNumber(),
                         request.getAverageMark()
                 );
                 case TEACHER -> port.updateTeacher(

@@ -77,9 +77,9 @@ public class PersonService implements PersonPort {
     }
 
     @Override
-    public void updateStudent(Long id, String dni, String phone, String email, Double averageMark) {
+    public void updateStudent(Long id, String dni, String phone, String email, Long number, Double averageMark) {
         Optional<StudentEntity> entity = studentRepository.findById(id);
-        var student = UpdateHelper.modifyStudentData(entity, dni, phone, email, averageMark);
+        var student = UpdateHelper.modifyStudentData(entity, dni, phone, email, number, averageMark);
         if (student.isPresent()) {
             studentRepository.save(student.get());
         }

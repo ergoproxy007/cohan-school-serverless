@@ -15,5 +15,5 @@ public interface PersonPort {
     Optional<Teacher> getTeacher(String dni);
     Optional<Long> save(Person person);
     void updateTeacher(Long id, String dni, String phone, String email, Double salary);
-    void updateStudent(Long id, String dni, String phone, String email, Double averageMark);
+    void updateStudent(Long id, String dni, String phone, String email, Long number, Double averageMark);
 }

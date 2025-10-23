@@ -21,12 +21,14 @@ public class UpdateHelper {
     }
 
     public static Optional<StudentEntity> modifyStudentData(Optional<StudentEntity> entity,
-                                         String dni, String phone, String email, Double averageMark) {
+                                         String dni, String phone, String email,
+                                         Long number, Double averageMark) {
         if (entity.isPresent()) {
             var entityToUpdate = entity.get();
             entityToUpdate.setDni(dni != null ? dni : entityToUpdate.getDni());
             entityToUpdate.setPhoneNumber(phone != null ? phone : entityToUpdate.getPhoneNumber());
             entityToUpdate.setEmail(email != null ? email : entityToUpdate.getEmail());
+            entityToUpdate.setNumber(number != null ? number : entityToUpdate.getNumber());
             entityToUpdate.setAverageMark(averageMark != null ? averageMark : entityToUpdate.getAverageMark());
             return Optional.of(entityToUpdate);
         }
