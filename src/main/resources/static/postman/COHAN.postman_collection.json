@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "1fd3be2f-0bb8-4741-bcd4-3570a2d5e8b1",
+		"name": "COHAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8542858"
+	},
+	"item": [
+		{
+			"name": "PING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PERSON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons/student/11113",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons",
+						"student",
+						"11113"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PERSON teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"11112\",\r\n    \"name\": \"DANIEL TORRES\",\r\n    \"phone_number\": \"3002223344\",\r\n    \"email\": \"email\",\r\n    \"salary\": 5111000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons/teacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons",
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PERSON student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"11114\",\r\n    \"name\": \"DANIEL TORRES\",\r\n    \"phone_number\": \"3002223344\",\r\n    \"email\": \"email\",\r\n    \"average_mark\": 4.1,\r\n    \"number\": 1001\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PERSON student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"dni\": \"1129509691\",\r\n    \"name\": \"Daniel Torres\",\r\n    \"phone_number\": \"2004563322\",\r\n    \"email\": \"torresruizdaniel23@gmail.com\",\r\n    \"average_mark\": null,\r\n    \"number\": 87\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons/student/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons",
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PERSON teacher",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salary\": 3000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/persons/teacher/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons",
+						"teacher",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET PERSON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gs8af4pd2b.execute-api.us-east-2.amazonaws.com/dev/api/persons/teacher/12345",
+					"protocol": "https",
+					"host": [
+						"gs8af4pd2b",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"persons",
+						"teacher",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS GET PERSON Student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gs8af4pd2b.execute-api.us-east-2.amazonaws.com/dev/api/persons/teacher/12345",
+					"protocol": "https",
+					"host": [
+						"gs8af4pd2b",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"persons",
+						"teacher",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS POST PERSON CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"12345\",\r\n    \"name\": \"DANIEL TORRES\",\r\n    \"phone_number\": \"3002223344\",\r\n    \"email\": \"email\",\r\n    \"salary\": 2340000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gs8af4pd2b.execute-api.us-east-2.amazonaws.com/dev/api/persons/teacher",
+					"protocol": "https",
+					"host": [
+						"gs8af4pd2b",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"persons",
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS POST PERSON UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"dni\": \"1129509691\",\r\n    \"name\": \"Daniel Torres\",\r\n    \"phone_number\": \"2004563322\",\r\n    \"email\": \"torresruizdaniel23@gmail.com\",\r\n    \"average_mark\": null,\r\n    \"number\": 87\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gs8af4pd2b.execute-api.us-east-2.amazonaws.com/dev/api/persons/student/2",
+					"protocol": "https",
+					"host": [
+						"gs8af4pd2b",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"persons",
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AWS PING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gs8af4pd2b.execute-api.us-east-2.amazonaws.com/dev/ping",
+					"protocol": "https",
+					"host": [
+						"gs8af4pd2b",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
