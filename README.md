@@ -19,7 +19,7 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Se puede usar cualquier librería para la visualización en HTML.
 * Se puede usar cualquier servidor de aplicaciones.
 
-## Documentación Técnic
+## Documentación Técnica
 * Amazon RDS -> PostgreSQL RDBMS
 * Amazon Lambda Funtions -> Java21 Serverless
 * Amazon EC2 y API Gateway
@@ -29,9 +29,9 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Spring Boot Vue.js Architecture
 <img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
 
-###### Technology
-* Java 17 /11 / 8
-* Spring Boot 3 / 2 (with Spring Web MVC, Spring Data JPA)
+###### Tecnología
+* Java 17 / 21
+* Spring Boot 3 (with Spring Web, Spring Data JPA)
 * H2 Database
 * Maven
 
