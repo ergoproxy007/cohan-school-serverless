@@ -24,7 +24,26 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Amazon Lambda Funtions -> Java21 Serverless
 * Amazon EC2 y API Gateway
 
+<img width="660" height="244" alt="image" src="https://github.com/user-attachments/assets/ef9e47dc-e50f-4b8d-8211-dab03e5f9467" />
+
+* Spring Boot Vue.js Architecture
 <img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
+
+###### Tecnología
+* Java 17 / 21
+* Spring Boot 3 (with Spring Web, Spring Data JPA)
+* H2 Database
+* Maven
+
+###### Spring Boot Back-end
+Endpoints Implementados:
+
+| Methods | Urls | Actions |
+|---------|------|---------|
+| POST | /api/persons/{type} | create new person |
+| GET | /api/persons/{type}/{dni} | find person by dni |
+| PUT | /api/persons/{type}/{id} | update person |
+| DELETE | /api/persons/{type}/{id} | delete person |
 
 ###### Database Connection:
 ```
@@ -36,18 +55,27 @@ datasource.password=postgres
 ### Deploy
 * Maven Packaging Application > { excetute command } ->  `mvn clean package`
 
-### Modelo de Datos Actual:
+| Front {GH-Pages} | Back {Postman} |
+|-------------|---------|
+| <img width="864" height="620" alt="Captura de pantalla 2025-10-23 162524" src="https://github.com/user-attachments/assets/f709b4c0-68e7-4c41-999b-da9b7f4b9414" /> | <img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/e0a0c338-7d7a-4286-910c-2fe2863e5cb8" /> |
 
-###### Actualización Modelo de Datos Propuesto:
-[PENDIENTE]
-
-###### Validaciones Adicionales:
-
-## Pruebas
-[PENDIENTE]
+### Package Structure
 
 ### Monitoreo, KPIs, Evidencias
-[PENDIENTE]
+* Puedes Visualizar la aplicación desde :
+  https://ergoproxy007.github.io/cohan-school-vue/
+
+<img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/fa346049-022c-4e2f-8f64-97a179e76aa5" />
+
+## Pruebas
+Se deja evidencia de pruebas en Front y Back.
+
+| Front {GH-Pages} | Back {Postman} |
+|-------------|---------|
+| <img width="864" height="620" alt="Captura de pantalla 2025-10-23 162524" src="https://github.com/user-attachments/assets/f709b4c0-68e7-4c41-999b-da9b7f4b9414" /> | <img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/e0a0c338-7d7a-4286-910c-2fe2863e5cb8" /> |
+
+* Puedes descargar la colección de POSTMAN para pruebas invocar los endpoint desplegados en AWS:
+[COHAN.postman_collection.json.zip](https://github.com/user-attachments/files/23108871/COHAN.postman_collection.json.zip)
 
 ## Estrategia de Despliegue
 * Despliegue de la nueva versión 1.12.2.
