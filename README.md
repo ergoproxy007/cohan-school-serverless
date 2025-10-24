@@ -38,7 +38,7 @@ datasource.password=postgres
 
 ### Monitoreo, KPIs, Evidencias
 * Puedes Visualizar la aplicación desde :
-https://github.com/ergoproxy007/cohan-school-vue/settings/pages
+  https://ergoproxy007.github.io/cohan-school-vue/
 
 <img width="972" height="472" alt="image" src="https://github.com/user-attachments/assets/fa346049-022c-4e2f-8f64-97a179e76aa5" />
 
