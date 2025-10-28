@@ -27,7 +27,7 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Spring Boot Vue.js Architecture
 <img width="660" height="244" alt="image" src="https://github.com/user-attachments/assets/ef9e47dc-e50f-4b8d-8211-dab03e5f9467" />
 
-* Diagrama Infraestructura
+* Diagrama Infraestructura - [Link](https://app.diagrams.net/?src=about#G1_F0fXd3ikb415lnqj63CtAJSYDhFxxDn#%7B%22pageId%22%3A%22n9iKU1mAWtXAAD2bhk_N%22%7D)
 <img width="552" height="560" alt="image" src="https://github.com/user-attachments/assets/bbde2294-6e23-4a8e-999a-08086e88ff2d" />
 
 ###### Tecnología
