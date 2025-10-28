@@ -29,6 +29,9 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Spring Boot Vue.js Architecture
 <img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
 
+* Diagrama Infraestructura
+<img width="552" height="560" alt="image" src="https://github.com/user-attachments/assets/bbde2294-6e23-4a8e-999a-08086e88ff2d" />
+
 ###### Tecnología
 * Java 17 / 21
 * Spring Boot 3 (with Spring Web, Spring Data JPA)
