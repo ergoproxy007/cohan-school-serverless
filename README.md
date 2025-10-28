@@ -23,11 +23,9 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Amazon RDS -> PostgreSQL RDBMS
 * Amazon Lambda Funtions -> Java21 Serverless
 * Amazon EC2 y API Gateway
-
-<img width="660" height="244" alt="image" src="https://github.com/user-attachments/assets/ef9e47dc-e50f-4b8d-8211-dab03e5f9467" />
-
+  
 * Spring Boot Vue.js Architecture
-<img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
+<img width="660" height="244" alt="image" src="https://github.com/user-attachments/assets/ef9e47dc-e50f-4b8d-8211-dab03e5f9467" />
 
 * Diagrama Infraestructura
 <img width="552" height="560" alt="image" src="https://github.com/user-attachments/assets/bbde2294-6e23-4a8e-999a-08086e88ff2d" />
@@ -39,6 +37,10 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 * Maven
 * JUnit Jupiter & Mockito
 * AWS Serverless Dependency
+
+###### Servicios AWS Usados
+<img width="802" height="622" alt="image" src="https://github.com/user-attachments/assets/0737ee04-1584-4ab2-abcb-28d077ef6dcc" />
+
 
 ###### Spring Boot Back-end
 Endpoints Implementados:
