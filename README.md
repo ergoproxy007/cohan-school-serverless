@@ -32,8 +32,10 @@ Se requiere implementar una Aplicación WEB Frontend y Backend que implemente un
 ###### Tecnología
 * Java 17 / 21
 * Spring Boot 3 (with Spring Web, Spring Data JPA)
-* H2 Database
+* PostgresSQL Database v
 * Maven
+* JUnit Jupiter & Mockito
+* AWS Serverless Dependency
 
 ###### Spring Boot Back-end
 Endpoints Implementados:
